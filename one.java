@@ -2,13 +2,15 @@ package programs;
 import java.util.*;
 public class one {
 	public static void main(String[] args) {
-		String s1="computer science engineering";
+		String s1;
 		String[] s,s2= {"","",""};
-		s=s1.split(" ");
 		int i,j,op;
-		System.out.println("Select 1 or 2");
 		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter string:");
+		s1=sc.nextLine();
+		System.out.println("Select 1 or 2");
 		op=sc.nextInt();
+		s=s1.split(" ");
 		if(op==2) {
 			for(i=0;i<3;i++) {
 				for(j=0;j<s[i].length();j++) {
