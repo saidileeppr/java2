@@ -1,8 +1,13 @@
 package programs;
 
+import java.util.Scanner;
+
 public class two {
 	public static void main(String[] args) {
-		String s1="computer science engineering";
+		String s1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter string:");
+		s1=sc.nextLine();
 		String[] s;
 		s=s1.split(" ");
 		int i,j,sum=0,sum1;
