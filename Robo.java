@@ -12,53 +12,59 @@ public class Dummy {
 		String b[]=s2.split(" ",10);
 		for(int i=0;i<b.length;i++){
 			if(b[i].equals("M")){
-        if(a[2].equals("E") && x+1<=input1){
-			x++;
-		}
-        if(a[2].equals("W") && x-1>=0){
-			x--;
-		}
-		if(a[2].equals("N") && y+1<=input2){
-			y++;
-		}
-		if(a[2].equals("S") && x-1>=0){
-			y--;
-		}
+				if(a[2].equals("E") && x+1<=input1){
+					x++;
+				}
+		        if(a[2].equals("W") && x-1>=0){
+					x--;
+
+				}
+				if(a[2].equals("N") && y+1<=input2){
+					y++;
+				}
+				if(a[2].equals("S") && y-1>=0){
+					y--;
+				}
+
+
 			}
 		if(b[i].equals("R")){
-			c++;
+
 			if(a[2].equals("N")){
 				a[2]="E";
 			}
-			if(a[2].equals("S")){
+			else if(a[2].equals("S")){
 				a[2]="W";
 			}
-			if(a[2].equals("E")){
+			else if(a[2].equals("E")){
 				a[2]="S";
 			}
-			if(a[2].equals("W")){
+			else if(a[2].equals("W")){
 				a[2]="N";
 			}
+
 		}
 			if(b[i].equals("L")){
+
 				c++;
 				if(a[2].equals("N")){
 					a[2]="W";
 				}
-				if(a[2].equals("S")){
+				else if(a[2].equals("S")){
 					a[2]="E";
 				}
-				if(a[2].equals("E")){
+				else if(a[2].equals("E")){
 					a[2]="N";
 				}
-				if(a[2].equals("W")){
+				else if(a[2].equals("W")){
 					a[2]="S";
 				}
+
 		}
 	}
 
 		
-		System.out.println(x+" "+y+" "+c);
+		System.out.println(x+" "+y+" "+a[2]);
 
 		}
 }
